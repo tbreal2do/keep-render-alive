@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Ping your service
         run: |
-          curl -s https://your-render-app.onrender.com/ping
+          curl -s https://youtube-webhook-jibi.onrender.com/ping
