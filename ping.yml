@@ -1,0 +1,15 @@
+name: Keep App Alive
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # 每 15 分钟运行
+  workflow_dispatch:         # 允许手动触发
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Ping your service
+        run: |
+          curl -s https://your-render-app.onrender.com/ping
